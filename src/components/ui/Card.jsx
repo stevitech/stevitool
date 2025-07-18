@@ -10,7 +10,7 @@ export default function Card({
 }) {
     const variants = {
         default:
-            "bg-[hsl(var(--color-primary)/0.05)] text-[hsl(var(--color-primary-foreground))]",
+            "bg-[hsl(var(--color-background))] text-[hsl(var(--color-foreground))]",
         muted: "bg-[hsl(var(--color-muted))] text-[hsl(var(--color-muted-foreground))]",
         glass: "bg-white/10 backdrop-blur-md border border-white/10",
     };

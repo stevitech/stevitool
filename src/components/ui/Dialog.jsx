@@ -35,7 +35,7 @@ export default function Dialog({
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 backdrop-blur-sm px-4">
             <div
                 className={cn(
-                    "relative w-full rounded-lg bg-white dark:bg-neutral-900 shadow-lg",
+                    "relative w-full rounded-lg bg-[hsl(var(--color-background))] text-[hsl(var(--color-foreground))]shadow-lg",
                     "animate-fade-slide max-h-[90vh] overflow-y-auto",
                     sizeMap[size],
                     className
@@ -54,12 +54,12 @@ export default function Dialog({
                 {(title || description) && (
                     <div className="px-6 pt-6">
                         {title && (
-                            <h2 className="text-lg font-semibold text-[hsl(var(--color-primary))]">
+                            <h2 className="text-lg font-semibold text-[hsl(var(--color-foreground))]">
                                 {title}
                             </h2>
                         )}
                         {description && (
-                            <p className="text-sm text-[hsl(var(--color-muted-foreground))] mt-1">
+                            <p className="text-sm text-[hsl(var(--color-foreground))]/90 mt-1">
                                 {description}
                             </p>
                         )}

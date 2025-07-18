@@ -7,6 +7,19 @@
 
 @layer theme, base, components, utilities;
 
+/* ===============================
+   GLOBAL THEME OVERRIDES (Option 2)
+   =============================== */
+:root {
+    --color-background: 0 0% 95%; /* white */
+    --color-foreground: 222 47% 11%; /* dark gray */
+}
+
+.dark {
+    --color-background: 0 0% 9%; /* neutral-900 */
+    --color-foreground: 0 0% 85%; /* neutral-200 */
+}
+
 @layer base {
     /* Base background and text colors */
     body {
