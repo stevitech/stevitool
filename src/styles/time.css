@@ -1,0 +1,48 @@
+/* src/styles/glass-analog-time.css */
+.glass-time-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    background-color: hsl(var(--color-muted) / 0.1);
+    border-radius: 0.75rem;
+    backdrop-filter: blur(12px);
+    border: 1px solid hsl(var(--color-ring) / 0.2);
+    padding: 0.75rem;
+    width: 200px;
+}
+
+.glass-time-label {
+    color: hsl(var(--color-muted-foreground));
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.glass-time-input {
+    --size: 2rem;
+    --borderRadius: 0.75rem;
+    --margin: 0.25rem;
+    --marginLeft: 3rem;
+
+    background-repeat: no-repeat;
+    background-position: var(--margin) 50%;
+    background-size: var(--size) var(--size);
+    transition: background-image 0.25s;
+    color: hsl(var(--color-text)) !important;
+    border-radius: var(--borderRadius) !important;
+    font-size: 1rem;
+    padding: var(--margin) var(--margin) var(--margin) var(--marginLeft);
+    width: 100%;
+    background-color: transparent;
+    border: 1px solid hsl(var(--color-ring) / 0.3);
+}
+
+.glass-time-input:focus {
+    outline: 2px solid hsl(var(--color-ring));
+    outline-offset: 2px;
+}
+
+.dark .glass-time-input {
+    background-color: rgba(24, 24, 24, 0.3);
+    border-color: hsl(var(--color-ring) / 0.4);
+    color: hsl(var(--color-text));
+}

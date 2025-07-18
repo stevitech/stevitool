@@ -1,0 +1,129 @@
+@layer theme {
+    :root {
+        /* Primary Theme */
+        --color-primary: 257 86% 66%;
+        --color-primary-foreground: 0 0% 100%;
+
+        /* Secondary */
+        --color-secondary: 217 91% 60%;
+        --color-secondary-foreground: 0 0% 100%;
+
+        /* Destructive (Red) */
+        --color-destructive: 0 84% 60%;
+        --color-destructive-foreground: 0 0% 100%;
+
+        /* Muted / Glass */
+        --color-muted: 257 86% 92%;
+        --color-muted-foreground: 257 86% 35%;
+
+        /* Ring & Shadow */
+        --color-ring: var(--color-primary);
+        --color-shadow: var(--color-primary);
+
+        /* Placeholders */
+        --color-placeholder: 217 10% 40%;
+        --color-placeholder-dark: 217 10% 60%;
+    }
+
+    [data-theme="blue"] {
+        --color-primary: 217 91% 60%;
+        --color-primary-foreground: 0 0% 100%;
+        --color-secondary: 257 86% 66%;
+        --color-secondary-foreground: 0 0% 100%;
+        --color-destructive: 0 84% 60%;
+        --color-destructive-foreground: 0 0% 100%;
+        --color-muted: 217 91% 92%;
+        --color-muted-foreground: 217 91% 30%;
+        --color-ring: 217 91% 60%;
+        --color-shadow: 217 91% 60%;
+    }
+
+    [data-theme="red"] {
+        --color-primary: 0 84% 60%;
+        --color-primary-foreground: 0 0% 100%;
+        --color-secondary: 257 86% 66%;
+        --color-secondary-foreground: 0 0% 100%;
+        --color-destructive: 0 84% 60%;
+        --color-destructive-foreground: 0 0% 100%;
+        --color-muted: 0 84% 92%;
+        --color-muted-foreground: 0 84% 30%;
+        --color-ring: 0 84% 60%;
+        --color-shadow: 0 84% 60%;
+    }
+
+    [data-theme="green"] {
+        --color-primary: 142 76% 36%;
+        --color-primary-foreground: 0 0% 100%;
+        --color-secondary: 257 86% 66%;
+        --color-secondary-foreground: 0 0% 100%;
+        --color-destructive: 0 84% 60%;
+        --color-destructive-foreground: 0 0% 100%;
+        --color-muted: 142 76% 92%;
+        --color-muted-foreground: 142 76% 25%;
+        --color-ring: 142 76% 36%;
+        --color-shadow: 142 76% 36%;
+    }
+
+    [data-theme="orange"] {
+        --color-primary: 24 94% 55%;
+        --color-primary-foreground: 0 0% 100%;
+        --color-secondary: 257 86% 66%;
+        --color-secondary-foreground: 0 0% 100%;
+        --color-destructive: 0 84% 60%;
+        --color-destructive-foreground: 0 0% 100%;
+        --color-muted: 24 94% 90%;
+        --color-muted-foreground: 24 94% 30%;
+        --color-ring: 24 94% 55%;
+        --color-shadow: 24 94% 55%;
+    }
+
+    [data-theme="lavender"] {
+        --color-primary: 257 86% 66%;
+        --color-primary-foreground: 0 0% 100%;
+        --color-secondary: 217 91% 60%;
+        --color-secondary-foreground: 0 0% 100%;
+        --color-destructive: 0 84% 60%;
+        --color-destructive-foreground: 0 0% 100%;
+        --color-muted: 257 86% 92%;
+        --color-muted-foreground: 257 86% 40%;
+        --color-ring: 257 86% 66%;
+        --color-shadow: 257 86% 66%;
+    }
+}
+
+@layer utilities {
+    .shadow-inset-theme {
+        box-shadow: inset -19px 0px 29px -34px hsl(var(--color-shadow) / 1);
+        -webkit-box-shadow: inset -19px 0px 29px -34px hsl(var(--color-shadow) / 1);
+        -moz-box-shadow: inset -19px 0px 29px -34px hsl(var(--color-shadow) / 1);
+    }
+
+    .animate-slide-up {
+        animation: slide-up 0.25s ease-out both;
+    }
+
+    @keyframes slide-up {
+        from {
+            opacity: 0;
+            transform: translateY(10px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    .animate-fade-slide {
+        animation: fade-slide 0.3s ease-out both;
+    }
+
+    @keyframes fade-slide {
+        0% {
+            opacity: 0;
+            transform: translateY(-6px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+}
